@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>skilldex</title>
+<meta name="description" content="How skilldex is collected: SKILL.md frontmatter read directly, community lists kept as lists, links checked at generation time.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Geist:wght@400;500&family=Geist+Mono:wght@400&display=swap" rel="stylesheet">
+<link rel="icon" type="image/svg+xml" href="./assets/mark.svg">
+<link rel="icon" type="image/png" href="./assets/mark.png">
+<link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- ============================ NAV ============================ -->
+<header class="slab">
+  <div class="container slab__in">
+    <a class="wordmark" href="./landing.html" aria-label="skilldex home">skilldex</a>
+    <nav class="slab__nav" id="sitenav" aria-label="Sections">
+      <a href="./landing.html">home</a>
+      <a href="./index.html">index</a>
+      <a href="#top">about</a>
+    </nav>
+    <button class="slab__burger" id="burger" type="button" aria-expanded="false" aria-controls="sitenav" aria-label="Menu"><span></span><span></span></button>
+  </div>
+</header>
+
+<main id="main">
+  <!-- ============================ HERO ============================ -->
+  <section class="hero" id="top" aria-labelledby="hero-h">
+    <div class="container">
+      <div class="hero__copy">
+        <h1 id="hero-h">how the ledger is <span class="verb">kept.</span></h1>
+        <p class="lead">A generated index, not a directory anyone edits by hand.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ METHOD ============================ -->
+  <section class="section section--tint-a" id="method" aria-labelledby="method-h">
+    <div class="container">
+      <div class="headblock">
+        <h2 id="method-h">The method</h2>
+        <p class="lead">Three scripts do the whole thing.</p>
+      </div>
+      <div class="steps">
+        <div class="step" style="--cat: var(--cat-4)">
+          <h3 class="step__h">fetch</h3>
+          <p class="step__d">A script walks each source repository's tree on GitHub, reads every SKILL.md frontmatter for its name and description, and merges the community's awesome lists.</p>
+        </div>
+        <div class="step" style="--cat: var(--cat-3)">
+          <h3 class="step__h">build</h3>
+          <p class="step__d">Duplicates fold away, every entry lands in one of eleven categories, and the page is written from the data file. Nobody edits the list by hand.</p>
+        </div>
+        <div class="step" style="--cat: var(--cat-6)">
+          <h3 class="step__h">verify</h3>
+          <p class="step__d">Each link is resolved to its repository root and checked, so a row always opens a live project page, not a buried file that may have moved.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ SOURCES ============================ -->
+  <section class="section section--tint-b" id="kinds" aria-labelledby="kinds-h">
+    <div class="container">
+      <div class="headblock">
+        <h2 id="kinds-h">Two kinds of source</h2>
+      </div>
+      <div class="kinds">
+        <div class="kind" style="--cat: var(--cat-1)">
+          <h3 class="kind__h">repository</h3>
+          <p class="kind__d">A GitHub repository whose SKILL.md files were read directly: microsoft, google, anthropics, openai, superpowers and the independent authors. Descriptions are the authors' own words.</p>
+        </div>
+        <div class="kind" style="--cat: var(--cat-5)">
+          <h3 class="kind__h">list</h3>
+          <p class="kind__d">Awesome-style indexes the community keeps by hand. Their entries are kept as the list wrote them, with the list as the source.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ CADENCE ============================ -->
+  <section class="section section--tint-a" id="cadence" aria-labelledby="cadence-h">
+    <div class="container">
+      <div class="headblock">
+        <h2 id="cadence-h">Cadence</h2>
+        <p class="lead">Generated 2026-11-12. The ledger is rebuilt when the data is refetched, so the index and its sources never drift apart.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ CONTRIBUTE ============================ -->
+  <section class="section section--band" id="contribute" aria-labelledby="contribute-h">
+    <div class="container">
+      <div class="headblock">
+        <h2 id="contribute-h">Add a source</h2>
+        <p class="lead">New sources join through the fetch list. A good candidate is a repository with SKILL.md files at its root, or a maintained awesome list.</p>
+        <a class="btn" href="./index.html">browse the ledger</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ============================ FOOTER ============================ -->
+<footer class="footer footer--colophon">
+  <div class="container">
+    <a class="wordmark" href="#top" aria-label="skilldex home">skilldex</a>
+    <p class="footer__statement">An index, not an endorsement. Descriptions are the authors' own. Generated 2026-11-12.</p>
+    <nav class="footer__links" aria-label="Page">
+      <a href="./landing.html">home</a>
+      <a href="./index.html">index</a>
+      <a href="#top">about</a>
+    </nav>
+  </div>
+</footer>
+
+<script src="./app.js"></script>
+</body>
+</html>

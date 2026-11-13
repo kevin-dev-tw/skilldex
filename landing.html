@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>skilldex</title>
+<meta name="description" content="506 agent skills from 19 sources, indexed from their own SKILL.md files. Browse the ledger, trace every row to its repo, install with one command.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Geist:wght@400;500&family=Geist+Mono:wght@400&display=swap" rel="stylesheet">
+<link rel="icon" type="image/svg+xml" href="./assets/mark.svg">
+<link rel="icon" type="image/png" href="./assets/mark.png">
+<link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- ============================ NAV ============================ -->
+<header class="slab">
+  <div class="container slab__in">
+    <a class="wordmark" href="#top" aria-label="skilldex home">skilldex</a>
+    <nav class="slab__nav" id="sitenav" aria-label="Sections">
+      <a href="#top">home</a>
+      <a href="./index.html">index</a>
+      <a href="./about.html">about</a>
+    </nav>
+    <button class="slab__burger" id="burger" type="button" aria-expanded="false" aria-controls="sitenav" aria-label="Menu"><span></span><span></span></button>
+  </div>
+</header>
+
+<main id="main">
+  <!-- ============================ HERO ============================ -->
+  <section class="hero" id="top" aria-labelledby="hero-h">
+    <div class="container hero__grid">
+      <div class="hero__copy">
+        <h1 id="hero-h">the skill your agent is <span class="verb">missing.</span></h1>
+        <p class="lead">506 skills from 19 sources, indexed from their own files.</p>
+        <div class="hero__actions">
+          <a class="btn" href="./index.html">browse the ledger</a>
+          <button class="hero__cmd" type="button" data-copy="npx skills add nutlope/hallmark -g"><code>npx skills add …</code></button>
+        </div>
+      </div>
+      <figure class="stage" aria-label="The index in miniature">
+        <div class="stage__panel">
+          <dl class="stage__facts">
+            <div><dt>skills</dt><dd class="measured">506</dd></div>
+            <div><dt>sources</dt><dd class="measured">19</dd></div>
+            <div><dt>categories</dt><dd class="measured">11</dd></div>
+            <div><dt>as of</dt><dd class="measured">2026-11-12</dd></div>
+          </dl>
+          <div class="stage__rows">
+            <div class="rail" style="--cat: var(--cat-1)"><p class="rail__name">DevOps &amp; Infra</p><p class="rail__count measured">164</p></div>
+            <div class="rail" style="--cat: var(--cat-2)"><p class="rail__name">Design &amp; Creative</p><p class="rail__count measured">138</p></div>
+            <div class="rail" style="--cat: var(--cat-3)"><p class="rail__name">Data &amp; Analysis</p><p class="rail__count measured">67</p></div>
+            <div class="rail" style="--cat: var(--cat-4)"><p class="rail__name">AI, Agents &amp; MCP</p><p class="rail__count measured">59</p></div>
+            <div class="rail" style="--cat: var(--cat-5)"><p class="rail__name">Web, Mobile &amp; Frontend</p><p class="rail__count measured">40</p></div>
+            <div class="rail" style="--cat: var(--cat-6)"><p class="rail__name">Documents &amp; Files</p><p class="rail__count measured">17</p></div>
+            <div class="rail" style="--cat: var(--cat-1)"><p class="rail__name">Video, Audio &amp; Media</p><p class="rail__count measured">10</p></div>
+          </div>
+          <p class="stage__foot"><a href="./index.html">the full ledger, eleven groups</a></p>
+        </div>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ============================ WHAT ============================ -->
+  <section class="section section--tint-a" id="what" aria-labelledby="what-h">
+    <div class="container">
+      <div class="headblock">
+        <h2 id="what-h">An index, not a store</h2>
+        <p class="lead">Every row is read from the SKILL.md itself and links back to the repository it came from. No copies, no screenshots, no votes.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ HOW ============================ -->
+  <section class="section section--tint-b" id="how" aria-labelledby="how-h">
+    <div class="container">
+      <div class="headblock">
+        <h2 id="how-h">Three moves</h2>
+      </div>
+      <div class="steps">
+        <div class="step" style="--cat: var(--cat-4)">
+          <h3 class="step__h">index</h3>
+          <p class="step__d">Filter the ledger by name, category or source. Every row opens its repository.</p>
+        </div>
+        <div class="step" style="--cat: var(--cat-3)">
+          <h3 class="step__h">sources</h3>
+          <p class="step__d">Nineteen places the skills live: repositories read directly, lists the community keeps.</p>
+        </div>
+        <div class="step" style="--cat: var(--cat-6)">
+          <h3 class="step__h">install</h3>
+          <p class="step__d">One command installs a skill into your coding agent and it is picked up on the next run.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ START ============================ -->
+  <section class="section section--band" id="start" aria-labelledby="start-h">
+    <div class="container install__grid">
+      <div class="headblock">
+        <h2 id="start-h">Put one to work</h2>
+        <p class="lead">The skills CLI installs any of them into your coding agent.</p>
+      </div>
+      <div class="install__panel">
+        <div class="command">
+          <code class="measured" id="cmd">npx skills add <span class="tint" style="--tint: var(--cat-4)">nutlope/hallmark</span> -g</code>
+          <button class="btn btn--quiet" type="button" data-copy="npx skills add nutlope/hallmark -g">Copy</button>
+        </div>
+        <p class="install__note">Or copy a skill's folder into your agent's skills directory and it is picked up on the next run: <code class="measured">.claude/skills</code>, <code class="measured">.agents/skills</code>, <code class="measured">.cursor/skills</code>.</p>
+        <a class="btn" href="./index.html">open the ledger</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ============================ FOOTER ============================ -->
+<footer class="footer footer--colophon">
+  <div class="container">
+    <a class="wordmark" href="#top" aria-label="skilldex home">skilldex</a>
+    <p class="footer__statement">An index, not an endorsement. Descriptions are the authors' own. Generated 2026-11-12.</p>
+    <nav class="footer__links" aria-label="Page">
+      <a href="#top">home</a>
+      <a href="./index.html">index</a>
+      <a href="./about.html">about</a>
+    </nav>
+  </div>
+</footer>
+
+<script src="./app.js"></script>
+</body>
+</html>

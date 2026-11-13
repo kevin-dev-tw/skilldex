@@ -1,0 +1,22 @@
+import puppeteer from 'puppeteer-core';
+const b = await puppeteer.launch({ executablePath: 'D:/skill/chrome-headless-shell/win64-157.0.8103.78/chrome-headless-shell-win64/chrome-headless-shell.exe', headless: 'shell' });
+const p = await b.newPage();
+await p.setViewport({ width: 1440, height: 900 });
+await p.goto('file:///D:/skill/index.html', { waitUntil: 'networkidle0' });
+await new Promise(r => setTimeout(r, 400));
+const r = await p.evaluate(async () => {
+  const d = document.querySelector('.ledger details');
+  const cs = () => getComputedStyle(d, '::details-content').blockSize;
+  const before = cs();
+  d.open = false;
+  await new Promise(r => setTimeout(r, 60));
+  const midClose = cs();
+  await new Promise(r => setTimeout(r, 300));
+  const closed = cs();
+  d.open = true;
+  await new Promise(r => setTimeout(r, 60));
+  const midOpen = cs();
+  return { before, midClose, closed, midOpen };
+});
+console.log(JSON.stringify(r));
+await b.close();

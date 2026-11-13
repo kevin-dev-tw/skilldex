@@ -1,0 +1,19 @@
+{
+  "name": "skilldex",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "dev": "node scripts/serve.mjs",
+    "fetch": "node scripts/fetch-skills.mjs",
+    "build": "node scripts/build-index.mjs",
+    "lint": "node C:/Users/tyoux/.agents/skills/hallmark/scripts/sloplint.mjs index.html styles.css app.js --genre modern-minimal --render"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "puppeteer-core": "^25.17.0"
+  }
+}

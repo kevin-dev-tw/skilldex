@@ -1,0 +1,9 @@
+node_modules/
+chrome-headless-shell/
+.hallmark/
+data/cache/
+data/linkcheck.json
+data/resolve-cache.json
+data/branch-check.json
+.env
+.env.*
